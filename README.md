@@ -3,7 +3,12 @@ This is a simple web application about restaurant.
 
 ## Futures
 - Overview all restaurants, including picture, name, and rating.
-- Show detail introduction of restaurant.
+- Basics :
+  - View all restaurants.
+  - Create a new restaurant.
+  - View a restaurant info.
+  - Modify a restaurant info.
+  - Remove a restaurant.
 - Search restaurants by name or category.
 
 ## Getting Started
@@ -25,5 +30,8 @@ $ npm install
 3. run project
 ```
 $ npm run dev
+
+# to create seed data, type
+$ npm run seed
 ```
 4. open the web and input the URL: http://localhost:3000
