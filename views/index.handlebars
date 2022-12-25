@@ -33,7 +33,7 @@
     <div class='col-md-10 col-12 mx-auto'>
       <div class='row row-cols-sm-3'>
         {{#each restaurants}}
-          <a href='/restaurants/{{this.id}}' class='text-secondary'>
+          <div class='card-deck'>
             <div class='card mb-3'>
               <img
                 class='card-img-top'
@@ -53,10 +53,39 @@
                   <i class='fas fa-star fa-xs'></i>
                 </span>
 
+                <div
+                  class='restaurant-function mt-2 h-25 gap-2 d-flex align-items-start justify-content-end'
+                >
+                  <a
+                    href='./restaurants/{{this._id}}'
+                    class='btn btn-primary btn-sm'
+                  >Detail</a>
+                  <a
+                    href='./restaurants/{{this._id}}/edit'
+                    class='btn btn-secondary btn-sm'
+                  >Edit</a>
+                  <form
+                    action='./restaurants/{{this._id}}/delete'
+                    method='POST'
+                    style='display: inline; height: 20px;'
+                  >
+                    <button
+                      type='submit'
+                      class='btn btn-danger btn-sm'
+                    >delete</button>
+                  </form>
+                </div>
               </div>
             </div>
-          </a>
+          </div>
         {{/each}}
+        <a href='./restaurants/add' class='link-primary'>
+          <div class='card text-center mb-3'>
+            <div class='card-body p-3'>
+              <i class='fa-solid fa-plus'></i>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   </div>
