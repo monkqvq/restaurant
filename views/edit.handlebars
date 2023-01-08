@@ -1,6 +1,6 @@
 <div class='container w-50 my-5'>
   <h2 class='my-3'>Edit restaurant information</h2>
-  <form action='/restaurants/{{restaurant._id}}/edit' method='POST'>
+  <form action='/restaurants/{{restaurant._id}}?_method=PUT' method='POST'>
     <div class='mb-3'>
       <label for='restaurant-name' class='form-label'>名稱</label>
       <input

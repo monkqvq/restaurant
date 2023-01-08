@@ -25,13 +25,31 @@
       </form>
     </div>
   </div>
+  <div class='dropdown d-flex justify-content-end'>
+    <a
+      class='btn btn-secondary dropdown-toggle'
+      href='#'
+      role='button'
+      id='dropdownMenuLink'
+      data-bs-toggle='dropdown'
+      aria-expanded='false'
+    >
+      Sort by
+    </a>
+    <ul class='dropdown-menu' aria-labelledby='dropdownMenuLink'>
+      <li><a class='dropdown-item' href='/sort_asc'>A > Z</a></li>
+      <li><a class='dropdown-item' href='/sort_desc'>Z > A</a></li>
+      <li><a class='dropdown-item' href='/sort_cat'>類別</a></li>
+      <li><a class='dropdown-item' href='/sort_loc'>地區</a></li>
+    </ul>
+  </div>
 </div>
 
 <!-- restaurant list -->
 <div class='container mt-5'>
   <div class='row'>
     <div class='col-md-10 col-12 mx-auto'>
-      <div class='row row-cols-sm-3'>
+      <div class='row row-cols-sm-3 restaurant-list'>
         {{#each restaurants}}
           <div class='card-deck'>
             <div class='card mb-3'>
@@ -65,7 +83,7 @@
                     class='btn btn-secondary btn-sm'
                   >Edit</a>
                   <form
-                    action='./restaurants/{{this._id}}/delete'
+                    action='./restaurants/{{this._id}}?_method=DELETE'
                     method='POST'
                     style='display: inline; height: 20px;'
                   >
